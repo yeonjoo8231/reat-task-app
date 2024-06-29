@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FC, useState, useRef } from "react";
+import React, { ChangeEvent, FC, useState } from "react";
 import { FiCheck } from "react-icons/fi";
 import { input, sideForm, icon } from "./SideForm.css";
 import { useTypedDispatch } from "../../../hooks/redux";
@@ -11,7 +11,7 @@ type TSideFromProps = {
   inputRef: React.RefObject<HTMLInputElement>;
 };
 
-const SideForm: FC<TSideFromProps> = ({ setIsFormOpen, inputRef }) => {
+const SideForm: FC<TSideFromProps> = ({ setIsFormOpen }) => {
   const [inputText, setInpuText] = useState("");
   const dispatch = useTypedDispatch();
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
