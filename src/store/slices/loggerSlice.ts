@@ -2,7 +2,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 import { ILogItem } from "../../types";
 
 type TLoggerState = {
-  logArray: ILogItem;
+  logArray: ILogItem[];
 };
 const initialState: TLoggerState = {
   logArray: [],
